@@ -29,6 +29,21 @@ public class MenuOptimised {
 
         int choix = sc.nextInt();
 
-        System.out.println("\n\n Vous avez choisi de consulter le menu : " + menu[1]);
+        switch (choix){
+            case 1:
+                System.out.println("\n\t Bienvenue dans notre application de gestion immo");
+                break;
+            case 2:
+                System.out.println("\n\t Consultez nos produits en ligne");
+                break;
+            case 3:
+                System.out.println("\n\t Contactez nous par mail : cohort2@adacorp.com");
+                break;
+            case 4:
+                System.out.println("\n\t A proppos de nous ");
+                break;
+            default:
+                System.out.println("\n\t Erreur 404 choix non disponible");
+        }
     }
 }

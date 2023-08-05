@@ -79,7 +79,7 @@ public class TableDeMultiplication {
 
 //        Afficher une table de multiplication sous cette forme
 //         *      --- --- --- --- ---
-//                *     | 2 | x | 1 | = | 2 |
+//         *     | 2 | x | 1 | = | 2 |
 //         *      --- --- --- --- ---
         System.out.println("\n\t  Affichage de la table de multiplication ");
         System.out.println("\t\t  --- --- --- --- ---");
