@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class MenuOptimised {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
 //        int[] numeroAleatoire = { 2,6,-3 };
 //
 //        int[][] tab2D = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
 //
-        Scanner sc = new Scanner(System.in);
+
         // Declaration du tableau
         String[] menu = { "Accueil", "Nos Produits", "Nous contacter", "A propos" };
 
@@ -25,7 +26,7 @@ public class MenuOptimised {
         System.out.println("\t 3️⃣ - " + menu [2]);
         System.out.println("\t 4️⃣ - "+ menu[3]);
 
-        System.out.print("\n\t \uD83D\uDE00 Votre choix : ");
+        System.out.print("\n\t Entrez votre choix : ");
 
         int choix = sc.nextInt();
 
@@ -40,7 +41,7 @@ public class MenuOptimised {
                 System.out.println("\n\t Contactez nous par mail : cohort2@adacorp.com");
                 break;
             case 4:
-                System.out.println("\n\t A proppos de nous ");
+                System.out.println("\n\t A propos de nous ");
                 break;
             default:
                 System.out.println("\n\t Erreur 404 choix non disponible");
