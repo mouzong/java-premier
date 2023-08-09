@@ -1,5 +1,6 @@
 package stephane;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exoboucle {
@@ -15,7 +16,7 @@ public class Exoboucle {
 
       // Exo2: Jour de la semaine
 
-//        System.out.println("Entrez le numéro du jour souhaité");
+//        System.out.print("Entrez le numéro du jour souhaité ");
 //        int n = sc.nextInt();
 //      switch (n ){
 //          case 1:
@@ -60,33 +61,42 @@ public class Exoboucle {
 //        int n = sc.nextInt();
 //        int m = sc.nextInt();
 //        System.out.println("Les Multiples de " +n+ " et "+ m+" sont :");
-//        for(int i = 1; i<=50; i++){
-//            if(i%n == 0 || i%m == 0)
-//                System.out.print(" | "+i);
+//
+////        for(int i = 1; i<=50; i++){
+////            if(i%n == 0 && i%m == 0)
+////                System.out.print(" | "+i);
+////        }
+//            for(int i = 1; i<=50; i++){
+//                if(i%n == 0) System.out.print(" | "+i);
+//            }
+//            for(int j = 1; j<=50; j++){
+//                 if(j%m == 0) System.out.print(" | "+j);
 //        }
+//
+
 
         // Exo 5: Calcul de la Moyenne
 
 //        System.out.println("Entrez les notes de l'étudiant et terminer par la valeur -1");
-//        int n=50; int tmp=0; int moy=0;
+//        int n=50; int tmp=0; double moy=0;
 //        int tab[] = new int[n];
 //        for(int i= 0; i<=n; i++){
 //             tab[i]= sc.nextInt();
-//            if(tab[i]== -1) i = n+1;
-//            ++tmp;
+//            if(tab[i]== -1) break;
+//            tmp++;
 //        }
-//        for(int i= 0; i<=tmp-2; i++)
+//        for(int i= 0; i<=tmp-1; i++)
 //            moy = moy + tab[i];
 //
-//            System.out.print("Moyenne =  "+moy/(tmp-2));
+//            System.out.print("Moyenne =  "+moy/(tmp));
 
-        // Exo 5: Recherche dans un tableau
+        // Exo 6: Recherche dans un tableau
 
         int[] tab = new int[50]; int indixeTrouve=0;
         boolean trouve = false;
-
+        Random random = new Random();
         for(int i=0; i<=49; i++){
-            tab[i] = i;
+            tab[i] = random.nextInt(100);
         }
         System.out.println("Entrez la valeur à rechercher");
         int valSeach = sc.nextInt();
@@ -94,7 +104,7 @@ public class Exoboucle {
             if (tab[i] == valSeach) {
                 trouve = true;
                 indixeTrouve = i;
-               i = tab.length + 1;
+               break;
             }
         }
             if(trouve == true) System.out.println("La valeur " + valSeach + " est presente dans le tableau à la position "+ indixeTrouve);
