@@ -1,4 +1,4 @@
-package com.codegrill;
+package stephane;
 
 public class Boucles {
     public static void main(String[] args) {
@@ -50,26 +50,29 @@ public class Boucles {
          *
          */
 
-        String[] listeDePresence = {
-                "Manu",     // index 0
-                "Jonathan", // index 1
-                "Ferry",    // index 2
-                "Florian",  // index 3
-                "Sylvain",  // index 4
-                "Stephane", // index 5
-                "Nicaise",  // index 6
-                "adacorp",  // index 7
-                "Andreas"   // index 8
-        };
 
-//        for(int j = 0; j < listeDePresence.length; j++){
-//            System.out.print("\n\t A l'index "+ j + " du tableau on a :: ");
-//            System.out.println(listeDePresence[j]);
+
+
+//        String[] listeDePresence = {
+//                "Manu",     // index 0
+//                "Jonathan", // index 1
+//                "Ferry",    // index 2
+//                "Florian",  // index 3
+//                "Sylvain",  // index 4
+//                "Stephane", // index 5
+//                "Nicaise",  // index 6
+//                "adacorp",  // index 7
+//                "Andreas"   // index 8
+//        };
+//
+////        for(int j = 0; j < listeDePresence.length; j++){
+////            System.out.print("\n\t A l'index "+ j + " du tableau on a :: ");
+////            System.out.println(listeDePresence[j]);
+////        }
+//
+//        for(String element : listeDePresence){
+//            System.out.println("\n\t - " + element);
 //        }
-
-        for(String element : listeDePresence){
-            System.out.println("\n\t - " + element);
-        }
 
         // Exercice : Ecrire bout de code qui demande a un utilisateur de fournir 10 nombres entiers
         // et calclule puis affiche la liste des nombres entrés sous forme de tableau [12, 15, -7 .... ]
