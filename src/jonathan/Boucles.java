@@ -54,7 +54,7 @@ public class Boucles {
          * Moyenne
          */
 
-        int[] ListNbr = new int[9]; // Tableau 1e dimension
+       /* int[] ListNbr = new int[9]; // Tableau 1e dimension
         for (int i=0; i < ListNbr.length; i++){
             System.out.print("Entrée le nombre à l'index N° "+ i + " : ");
             ListNbr[i] = sc.nextInt();
@@ -72,7 +72,8 @@ public class Boucles {
         System.out.println("\t\n Calcul de la Somme et de la Moyenne");
 
         System.out.println("\t\n La Sommme est : "+Somme);
-        System.out.println(" La moyenne est "+Somme+"/" + ListNbr.length+" = "+Somme/ListNbr.length);
+        System.out.println(" La moyenne est "+Somme+"/" + ListNbr.length+" = "+Somme/ListNbr.length);*/
+
     }
 }
 
