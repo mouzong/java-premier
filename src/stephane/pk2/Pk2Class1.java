@@ -1,2 +1,4 @@
-package stephane.pk2;public class Pk2Class1 {
+package stephane.pk2;
+
+public class Pk2Class1 {
 }
