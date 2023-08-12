@@ -69,10 +69,5 @@ public class Operateurs {
         } else {
             System.out.println(a + " est un nombre inferieur ou egal à "+b+" et impaire ou paire !");
         }
-
-
-
-
-
     }
 }
