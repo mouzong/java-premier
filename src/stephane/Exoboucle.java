@@ -92,23 +92,34 @@ public class Exoboucle {
 
         // Exo 6: Recherche dans un tableau
 
-        int[] tab = new int[50]; int indixeTrouve=0;
-        boolean trouve = false;
-        Random random = new Random();
-        for(int i=0; i<=49; i++){
-            tab[i] = random.nextInt(100);
-        }
-        System.out.println("Entrez la valeur à rechercher");
-        int valSeach = sc.nextInt();
-        for(int i = 0; i<=49; i++) {
-            if (tab[i] == valSeach) {
-                trouve = true;
-                indixeTrouve = i;
-               break;
-            }
-        }
-            if(trouve == true) System.out.println("La valeur " + valSeach + " est presente dans le tableau à la position "+ indixeTrouve);
-            else System.out.println(" La valeur " + valSeach + " est absente du tableau");
+//        int[] tab = new int[50]; int indixeTrouve=0;
+//        boolean trouve = false;
+//        Random random = new Random();
+//        for(int i=0; i<=49; i++){
+//            tab[i] = random.nextInt(100);
+//        }
+//        System.out.println("Entrez la valeur à rechercher");
+//        int valSeach = sc.nextInt();
+//        for(int i = 0; i<=49; i++) {
+//            if (tab[i] == valSeach) {
+//                trouve = true;
+//                indixeTrouve = i;
+//               break;
+//            }
+//        }
+//            if(trouve == true) System.out.println("La valeur " + valSeach + " est presente dans le tableau à la position "+ indixeTrouve);
+//            else System.out.println(" La valeur " + valSeach + " est absente du tableau");
+
+        // Exo n: Utilisation simplifier de if
+      int a,b,max;
+        System.out.print("Entrez les deux nombres à comparer ");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        max = a > b ? a:b;
+
+        System.out.print("Le max de "+ a + " et " + b + " est : "+a);
+
+
         }
         }
 
