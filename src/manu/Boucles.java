@@ -208,9 +208,7 @@ public class Boucles {
 //            System.out.print(element +" ");
 //            somme += element;
 //            moyenne = somme/5;
-//        }
+        }
 //        //System.out.println(" La Somme est : "+somme);
-//       System.out.println(" La Moyenne de l'Etudiant est : "+moyenne);
+//     /
     }
-}
-
