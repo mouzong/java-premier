@@ -1,5 +1,6 @@
 package stephane;
 
+<<<<<<< HEAD
 import java.util.Scanner;
 
 public class ExosSerie2 {
@@ -62,6 +63,11 @@ public class ExosSerie2 {
       //  System.out.println(mot.charAt(2));
 
 
+=======
+public class TAbleDeMultiplication {
+    public static void main(String[] args) {
+        System.out.println("hello world");
+>>>>>>> 12b25d7512d692955ac87640e5388a29886d7aff
     }
 
 }

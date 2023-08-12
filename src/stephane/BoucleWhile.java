@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package stephane;
 
 import java.util.Scanner;
@@ -28,4 +29,7 @@ public class BoucleWhile {
 
 
     }
+=======
+package stephane;public class BoucleWhile {
+>>>>>>> 12b25d7512d692955ac87640e5388a29886d7aff
 }
