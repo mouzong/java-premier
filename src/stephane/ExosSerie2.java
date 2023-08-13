@@ -1,12 +1,11 @@
 package stephane;
 
-<<<<<<< HEAD
 import java.util.Scanner;
 
 public class ExosSerie2 {
     public static void main(String[] args) {
 
-    // Exo 2 : TAbleau inversé
+        // Exo 2 : TAbleau inversé
 
         Scanner sc = new Scanner(System.in);
 
@@ -33,7 +32,7 @@ public class ExosSerie2 {
 //        }
 //        System.out.println("La factorielle de "+n+" est : " +fact);
 
-           // Exo 5: Recherche du maximum et du minimum
+        // Exo 5: Recherche du maximum et du minimum
 
 //        System.out.print("Entrez la taille du tableau: ");
 //        int size = sc.nextInt();
@@ -49,7 +48,7 @@ public class ExosSerie2 {
 //        }
 //        System.out.println("Min = " +min+" ; max = "+max);
 
-          //Exo 7 :  Vérification de palindrome
+        //Exo 7 :  Vérification de palindrome
         System.out.println("\t\t Entrez un mot ");
 
         String mot = sc.nextLine();
@@ -60,14 +59,9 @@ public class ExosSerie2 {
             System.out.print(mot.charAt(mot.length()-1-i));
             i++;
         }
-      //  System.out.println(mot.charAt(2));
+        //  System.out.println(mot.charAt(2));
 
 
-=======
-public class TAbleDeMultiplication {
-    public static void main(String[] args) {
-        System.out.println("hello world");
->>>>>>> 12b25d7512d692955ac87640e5388a29886d7aff
     }
 
 }
