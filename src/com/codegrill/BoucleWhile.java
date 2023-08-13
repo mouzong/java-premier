@@ -2,11 +2,12 @@ package com.codegrill;
 
 public class BoucleWhile {
     public static void main(String[] args) {
-        int number = 2;
+        int number = 0;
 
         while(number < 100){
-            System.out.println(number);
             number += 2; // number = number + 2;
+            System.out.println(number);
+
         }
 
         // Exercice : Ecrire un programme qui affiche la table de multiplication
