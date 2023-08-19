@@ -24,12 +24,12 @@ public class Menu {
      */
     public static void menuApropos(){
         System.out.println("""
-                Situé dans le centre de la ville de Yaoundé,\n
-                nous somme une agence de location de biens immobiliers.
-                Nous faisons dasn la location saisonniere et à l'année.
-                
-                Ouvert depuis 1978 nous avons a notre actif des partenaire
-                de qualité qui vous offrent des espaces de choix en fonctionde votre budget 
+                \n\t Situé dans le centre de la ville de Yaoundé,
+                \t nous somme une agence de location de biens immobiliers.
+                \t Nous faisons dasn la location saisonniere et à l'année.
+             
+                \t Ouvert depuis 1978 nous avons a notre actif des partenaire
+                \t de qualité qui vous offrent des espaces de choix en fonctionde votre budget 
                 """);
     }
     /**
@@ -53,5 +53,29 @@ public class Menu {
      */
     public static void messageErreurChoixDeMenu() {
         System.out.println("\n\t ❌ Erreur de choix : Vueillez entrer un nombre compris entre 1 et 4 !\n");
+    }
+
+    public static void menuAcceuil() {
+        System.out.println("\n\t Bienvenue a l'accueil de notre projet");
+    }
+
+    public static int menuNoProduits(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\n\t 1 - Appartements meublés / vide");
+        System.out.println("\t 2 - Studio meublés / vide");
+        System.out.println("\t 3 - Chambres meublés / vide");
+        System.out.println("\t 4 - Salles de fêtes");
+        System.out.println("\t 5 - Menu Précédent");
+        System.out.println("\t 0 - Quitter l'application");
+        System.out.print("\n\t Votre choix : ");
+
+        return scanner.nextInt();
+    }
+
+
+    public static void menuNousContacter(){
+        System.out.println("\n\t Menu nous contacter");
     }
 }
