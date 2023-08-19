@@ -10,7 +10,6 @@ public class Menu {
     public static int menuPrincipal(){
 
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("\t 1️⃣ - Accueil");
         System.out.println("\t 2️⃣ - Nos Produits");
         System.out.println("\t 3️⃣ - Nous contacter");

@@ -4,7 +4,6 @@
 ## l'assimilation des notions vues en cours de programmation java
 
 ### Introduction
-
  ```java
  System.out.println()
  ```
