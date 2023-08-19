@@ -12,9 +12,10 @@ public class Main {
         }
 
         switch (choixDeMenu) {
-            case 4:
-                Menu.menuApropos();
-                break;
+            case 1 -> Menu.menuAcceuil();
+            case 2 -> Menu.menuNoProduits();
+            case 3 -> Menu.menuNousContacter();
+            case 4 -> Menu.menuApropos();
         }
     }
 }
