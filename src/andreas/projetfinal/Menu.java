@@ -59,8 +59,19 @@ public class Menu {
         System.out.println("\n\t Bienvenue a l'accueil de notre projet");
     }
 
-    public static void menuNoProduits(){
-        System.out.println("\n\t Mon menu nos produits");
+    public static int menuNoProduits(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\n\t 1 - Appartements meublés / vide");
+        System.out.println("\t 2 - Studio meublés / vide");
+        System.out.println("\t 3 - Chambres meublés / vide");
+        System.out.println("\t 4 - Salles de fêtes");
+        System.out.println("\t 5 - Menu Précédent");
+        System.out.println("\t 0 - Quitter l'application");
+        System.out.print("\n\t Votre choix : ");
+
+        return scanner.nextInt();
     }
 
 

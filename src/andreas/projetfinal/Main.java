@@ -6,12 +6,9 @@ public class Main {
 
         int choixDeMenu = Menu.menuPrincipal();
 
-        while(choixDeMenu < 1 || choixDeMenu > 4){
-            Menu.messageErreurChoixDeMenu();
-            choixDeMenu = Menu.menuPrincipal();
-        }
+        int choix2 = BoiteAOutils.controleMenu(choixDeMenu, 1, 4);
 
-        switch (choixDeMenu) {
+        switch (choix2) {
             case 1 -> Menu.menuAcceuil();
             case 2 -> Menu.menuNoProduits();
             case 3 -> Menu.menuNousContacter();
