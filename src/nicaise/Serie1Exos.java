@@ -50,14 +50,31 @@ public class Serie1Exos {
 //        tableauUneDimension= sc.nextInt();
 
 //     Exo 4-a Multiple de 3 et 5 Afficher les multiples de 3 et 5 compris entre 1 et 50 (sans saisie utilisateur)
-        int valeurMutiple =1;
-        System.out.println("Afficher les multiples de 3 et 5 compris entre 1 et 50");
+//        int valeurMutiple =1;
+//        System.out.println("Afficher les multiples de 3 et 5 compris entre 1 et 50");
+//
+//            for (valeurMutiple=1;valeurMutiple >=1 && valeurMutiple <= 50;valeurMutiple++){
+//
+//                if (valeurMutiple%3==0 || valeurMutiple%5 == 0){
+//                    System.out.println( valeurMutiple);
+//            }
+//        }
 
-            for (valeurMutiple=1;valeurMutiple >=1 && valeurMutiple <= 50;valeurMutiple++){
+//           Exo 5 : Calcul de la moyenne
 
-                if (valeurMutiple%3==0 || valeurMutiple%5 == 0){
-                    System.out.println( valeurMutiple);
-            }
-        }
+                int[]notes={12,16,14,15,13};
+        System.out.println((notes[0]+notes[1]+notes[2]+ notes[3]+notes [4])/ notes.length);
+
+                int [] tab= {1,2,3,4,5};
+                for (int i=0;i < tab.length;i++){
+                    System.out.println(tab [i]);
+                }
+
+
+
+
+
+
+
     }
 }
