@@ -20,6 +20,19 @@ public class Menu {
     }
 
     /**
+     *   Cette methode affiche la page à propos de notre application
+     */
+    public static void menuApropos(){
+        System.out.println("""
+                Situé dans le centre de la ville de Yaoundé,\n
+                nous somme une agence de location de biens immobiliers.
+                Nous faisons dasn la location saisonniere et à l'année.
+                
+                Ouvert depuis 1978 nous avons a notre actif des partenaire
+                de qualité qui vous offrent des espaces de choix en fonctionde votre budget 
+                """);
+    }
+    /**
      * Cette methode affiche l'entete de notre menu de programme
      */
 
