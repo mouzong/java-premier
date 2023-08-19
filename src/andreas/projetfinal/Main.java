@@ -4,13 +4,13 @@ public class Main {
     public static void main(String[] args) {
         Menu.afficherEnteteDeMenu();
 
-        int choix = Menu.menuPrincipal();
+        int choixDeMenu = Menu.menuPrincipal();
 
-        while(choix < 1 || choix > 4){
+        while(choixDeMenu < 1 || choixDeMenu > 4){
             Menu.messageErreurChoixDeMenu();
-            choix = Menu.menuPrincipal();
+            choixDeMenu = Menu.menuPrincipal();
         }
 
-        System.out.println("\n\t \uD83C\uDF89 Vous avez choisi le menu : "+ choix);
+        System.out.println("\n\t \uD83C\uDF89 Vous avez choisi le menu : "+ choixDeMenu);
     }
 }
