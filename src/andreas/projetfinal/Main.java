@@ -11,6 +11,10 @@ public class Main {
             choixDeMenu = Menu.menuPrincipal();
         }
 
-        System.out.println("\n\t \uD83C\uDF89 Vous avez choisi le menu : "+ choixDeMenu);
+        switch (choixDeMenu) {
+            case 4:
+                Menu.menuApropos();
+                break;
+        }
     }
 }
