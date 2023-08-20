@@ -1,4 +1,4 @@
-package andreas.projetfinal;
+package andreas.projetfinal.outils;
 
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class Menu {
         System.out.println("\t 2️⃣ - Nos Produits");
         System.out.println("\t 3️⃣ - Nous contacter");
         System.out.println("\t 4️⃣ - A propos");
+        System.out.println("\t  5\uFE0F⃣  - Admin ");
         System.out.print("\n\t \uD83D\uDE00 Votre choix : ");
 
         return scanner.nextInt();
@@ -77,5 +78,20 @@ public class Menu {
 
     public static void menuNousContacter(){
         System.out.println("\n\t Menu nous contacter");
+    }
+
+    public static int menuAdministration() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\n\t 1 - Gestion des clients");
+        System.out.println("\t 2 - Gestions des produits");
+        System.out.println("\t 3 - Gestion des commandes");
+        System.out.println("\t 4 - Gestion des factures");
+        System.out.println("\t 5 - Retour à l'Accueil");
+        System.out.println("\t 0 - Quitter l'application");
+        System.out.print("\n\t Votre choix : ");
+
+        return scanner.nextInt();
+
     }
 }

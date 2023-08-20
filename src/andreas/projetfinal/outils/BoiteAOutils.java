@@ -1,4 +1,4 @@
-package andreas.projetfinal;
+package andreas.projetfinal.outils;
 
 public class BoiteAOutils {
     public static int controleMenu(int choix, int inf, int sup){
