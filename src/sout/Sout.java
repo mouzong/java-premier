@@ -1,12 +1,10 @@
 package sout;
 
-import andreas.AccessModifiers;
 
 public class Sout {
     public static void main(String[] args) {
         int x , y; // creation des variables  x et y
 
-        AccessModifiers accessModifiers = new AccessModifiers();
 
 
 
