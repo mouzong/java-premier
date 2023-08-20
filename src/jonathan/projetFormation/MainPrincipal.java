@@ -1,21 +1,28 @@
 package jonathan.projetFormation;
 
+import andreas.projetfinal.BoiteAOutils;
+import andreas.projetfinal.Menu;
+
 public class MainPrincipal {
     public static void main(String[] args) {
+        //Affichage de l'entête du Menu
         MenuPrincipal.afficherEnteteDeMenu();
 
+        //Choix du menue Principal
         int choixDeMenu = MenuPrincipal.menuPrincipal();
-        while(choixDeMenu < 1 || choixDeMenu > 4){
-            MenuPrincipal.messageErreurChoixDeMenu();
-            choixDeMenu = MenuPrincipal.menuPrincipal();
-        }
+        //Methode Controle de la valeur
+        int choix2 = Tools.controleMenu(choixDeMenu, 0, 4);
+        int choixMenuProduit=0;
 
-        switch (choixDeMenu) {
+        switch (choix2) {
+            case 0:
+                MenuPrincipal.Quitter();
+                break;
             case 1:
                 MenuPrincipal.Accueil();
                 break;
             case 2:
-                MenuPrincipal.NosProduits();
+                choixMenuProduit =MenuPrincipal.NosProduits();
                 break;
             case 3:
                 MenuPrincipal.Nouscontacter();
@@ -24,6 +31,15 @@ public class MainPrincipal {
                 MenuPrincipal.Apropos();
                 break;
         }
-        //System.out.println("\n\t \uD83C\uDF89 Vous avez choisi le menu : "+ choixDeMenu);
+
+        //Choix du menue Produit
+       // int choixMenuProduit = MenuPrincipal.NosProduits();
+        int choixProduit = Tools.controleMenuProduit(choixMenuProduit, 0, 6);
+
+        switch (choixProduit) {
+            case 0 -> MenuPrincipal.Quitter();
+            case 6 -> MenuPrincipal.menuPrincipal();
+        }
+
     }
 }
