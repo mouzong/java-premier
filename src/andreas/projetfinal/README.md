@@ -20,7 +20,7 @@
    - disponibilité
    - nombreDePieces
    - ville
-   - service
+   - service {'location','achat'}
    
  - Commande :
    - client
