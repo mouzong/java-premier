@@ -1,16 +1,22 @@
 package andreas.projetfinal;
 
+import andreas.projetfinal.outils.BoiteAOutils;
+import andreas.projetfinal.outils.Menu;
+
 public class Main {
     public static void main(String[] args) {
         Menu.afficherEnteteDeMenu();
 
-        int choix = Menu.menuPrincipal();
+        int choixDeMenu = Menu.menuPrincipal();
 
-        while(choix < 1 || choix > 4){
-            Menu.messageErreurChoixDeMenu();
-            choix = Menu.menuPrincipal();
+        int choix2 = BoiteAOutils.controleMenu(choixDeMenu, 1, 5);
+
+        switch (choix2) {
+            case 1 -> Menu.menuAcceuil();
+            case 2 -> Menu.menuNoProduits();
+            case 3 -> Menu.menuNousContacter();
+            case 4 -> Menu.menuApropos();
+            case 5 -> Menu.menuAdministration();
         }
-
-        System.out.println("\n\t \uD83C\uDF89 Vous avez choisi le menu : "+ choix);
     }
 }
