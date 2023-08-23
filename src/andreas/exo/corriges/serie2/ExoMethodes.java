@@ -1,5 +1,7 @@
 package andreas.exo.corriges.serie2;
 
+import sout.Sout;
+
 import java.util.Scanner;
 
 public class ExoMethodes {
@@ -84,7 +86,64 @@ public class ExoMethodes {
     }
 
     public static void temperature(Scanner sc){
-        System.out.print("\n\t");
+        System.out.println("\n\t 1 - Celcius vers Farenheit");
+        System.out.println("\t 2 - Farenheit vers Celcius");
+        System.out.print("\n\t Entrer un choix de conversion : ");
+
+        int choix = sc.nextInt();
+
+        double temperature;
+
+        switch (choix){
+            case 1:
+                System.out.print("\n\t Entrez la temperature en Celcius : ");
+                temperature = sc.nextDouble();
+                double far = (temperature * 9 / 5) + 32;
+                System.out.println("\n\t La temperature farenheit est : "+ far);
+                break;
+            case 2:
+                System.out.print("\n\t Entrez la temperature en Farenheit : ");
+                temperature = sc.nextDouble();
+                double celcius = (temperature - 32) * 5 / 9;
+                System.out.println("\n\t La temperature en Celcius est : "+celcius);
+                break;
+            default:
+                System.out.println("\n\t Option invalide !");
+        }
+    }
+
+    public static void minMaxTableau(Scanner sc){
+        System.out.print("\n\t Entrer la taille du tableau : ");
+        int taille = sc.nextInt();
+
+        int[] tabelement = new int[taille];
+
+        int min, max;
+
+        for(int i = 0; i < taille; i++){
+            System.out.print("\t Entrez un nombre : ");
+            tabelement[i] = sc.nextInt();
+        }
+
+        max = min = tabelement[0];
+
+        for(int valeur : tabelement){
+            if(valeur > max)
+                max = valeur;
+            else if (valeur < min) {
+                min = valeur;
+            }
+        }
+
+        System.out.print("\n\t [");
+        for (int val : tabelement){
+            System.out.print(" "+val);
+        }
+        System.out.println(" ]");
+
+
+        System.out.println("\n\t Maximum = "+ max);
+        System.out.println("\n\t Minimum = "+ min);
     }
 
 }
