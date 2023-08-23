@@ -1,4 +1,4 @@
-package andreas.projetfinal;
+package andreas.projetfinal.entite;
 
 public class Client {
     public static int nombreDeClients = 0;

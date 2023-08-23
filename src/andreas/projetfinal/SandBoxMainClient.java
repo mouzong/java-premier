@@ -1,5 +1,7 @@
 package andreas.projetfinal;
 
+import andreas.projetfinal.entite.Client;
+
 public class SandBoxMainClient {
     public static void main(String[] args) {
         Client c0 = new Client("ETOUA","Nicaise");
