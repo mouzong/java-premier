@@ -1,12 +1,18 @@
 package jonathan.projetFormation;
 
-import andreas.projetfinal.BoiteAOutils;
-import andreas.projetfinal.Menu;
+import jonathan.projetFormation.Tools.MenuPrincipal;
+import jonathan.projetFormation.Tools.Tools;
+import jonathan.projetFormation.services.ClientService;
 
 public class MainPrincipal {
     public static void main(String[] args) {
+
+        ClientService.createClient();
+
         //Affichage de l'entête du Menu
         MenuPrincipal.afficherEnteteDeMenu();
+
+
 
         //Choix du menue Principal
         int choixDeMenu = MenuPrincipal.menuPrincipal();

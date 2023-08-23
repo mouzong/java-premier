@@ -1,4 +1,4 @@
-package jonathan.projetFormation;
+package jonathan.projetFormation.Tools;
 import java.util.Scanner;
 
 public class MenuPrincipal {
