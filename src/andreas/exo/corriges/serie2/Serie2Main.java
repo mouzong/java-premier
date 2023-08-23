@@ -9,7 +9,8 @@ public class Serie2Main {
 
 //        ExoMethodes.exo1(sc);
 //        ExoMethodes.tableauInverse(sc);
-        ExoMethodes.factoriel(sc);
-
+//        ExoMethodes.factoriel(sc);
+//        ExoMethodes.temperature(sc);
+        ExoMethodes.minMaxTableau(sc);
     }
 }
