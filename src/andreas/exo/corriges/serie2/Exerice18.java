@@ -1,4 +1,4 @@
-package andreas.exo.corriges;
+package andreas.exo.corriges.serie2;
 
 import java.util.Scanner;
 
