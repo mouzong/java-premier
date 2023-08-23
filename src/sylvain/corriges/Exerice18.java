@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/sylvain/corriges/Exerice18.java
 package sylvain.corriges;
+========
+package andreas.exo.corriges.serie2;
+>>>>>>>> fe1fcd314df73d676afb0680e5ea5f54c3167a17:src/andreas/exo/corriges/serie2/Exerice18.java
 
 import java.util.Scanner;
 
