@@ -1,6 +1,6 @@
 package jonathan.projetFormation.Tools;
 
-import andreas.projetfinal.Menu;
+//import andreas.projetfinal.Menu;
 
 public class Tools {
     public static int controleMenu(int choix, int nbrinf, int nbrsup){
@@ -19,7 +19,7 @@ public class Tools {
         int choixDeRetour = choix;
 
         while(choixDeRetour < inf || choixDeRetour > sup){
-            Menu.messageErreurChoixDeMenu();
+           // Menu.messageErreurChoixDeMenu();
             choixDeRetour = MenuPrincipal.NosProduits();
         }
 

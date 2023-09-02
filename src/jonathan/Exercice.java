@@ -44,7 +44,7 @@ public class Exercice {
         System.out.println("]");*/
 
         //Exercice 3 : Calcul de la factorielle
-        int n;
+        /*int n;
         Scanner sc = new Scanner(System.in);
         System.out.print("Entre un Nombre : ");
         n = sc.nextInt();
@@ -52,12 +52,25 @@ public class Exercice {
         for (int i= fact-1; i > 0; i--){
             fact = fact * i;
         }
-        System.out.println("factoriel : "+n+"! = "+fact);
+        System.out.println("factoriel : "+n+"! = "+fact);*/
 
+        //Exercice 9 : Comptage des voyelles
+        /**Écrivez un programme Java qui demande à l'utilisateur d'entrer une chaîne de caractères
+         et compte le nombre de voyelles (a, e, i, o, u) dans la chaîne.
 
-
-
-
-
+         */
+        String chaine;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Entre une Chaine de caractère : ");
+        chaine = sc.nextLine();
+        chaine = chaine.toLowerCase();
+        int cpt = 0;
+        for(int i = 0; i < chaine.length(); i++) {
+            char c = chaine.charAt(i);
+            if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                cpt++;
+            }
+        }
+        System.out.println("Le nombre de voyelles est :"+cpt);
     }
 }

@@ -7,10 +7,10 @@ public class Serie2Main {
 
         Scanner sc = new Scanner(System.in);
 
-//        ExoMethodes.exo1(sc);
-//        ExoMethodes.tableauInverse(sc);
-//        ExoMethodes.factoriel(sc);
-//        ExoMethodes.temperature(sc);
-        ExoMethodes.minMaxTableau(sc);
+//          ExoMethodes.exo1(sc);
+//          ExoMethodes.tableauInverse(sc);
+//          ExoMethodes.factoriel(sc);
+//          ExoMethodes.temperature(sc);
+//          ExoMethodes.minMaxTableau(sc);
     }
 }
