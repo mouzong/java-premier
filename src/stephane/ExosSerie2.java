@@ -7,7 +7,7 @@ public class ExosSerie2 {
 
     // Exo 2 : TAbleau inversé
 
-        Scanner sc = new Scanner(System.in);
+     /*   Scanner sc = new Scanner(System.in);
 
         System.out.print("Entrez la taille du tableau: ");
         // Recuperation et declaration des tableaux
@@ -22,7 +22,7 @@ public class ExosSerie2 {
         System.out.println("Votre tableau inversé est : ");
         for (int el:tabReverse){
             System.out.print(" | "+ el);
-        }
+        }*/
         //Exo 3: Calcul de la factorielle
 //        System.out.println(" ****** Calcul de la factorielle ****** ");
 //        System.out.print("Entrer un nombre ");
@@ -93,20 +93,29 @@ public class ExosSerie2 {
 
              //  Exo 9: Comptage des voyelles
 
-//        System.out.println("\t\t ***** COMPTAGE DES VOYELLES ***** ");
-//        System.out.print("\t\t Entrez un mot : ");
-//            // Recuperation du mot entré au clavier
-//        String mot = sc.nextLine();
-//         int i=0, nbreVoyelle = 0;
-//            // Compte les voyelles du mot et stock le nombre dans nbreVoyelle
-//        while (i < mot.length()){
-//            if ((mot.charAt(i) == 'a') || (mot.charAt(i) == 'e') || (mot.charAt(i) == 'i')
-//                    || (mot.charAt(i) == 'o') || (mot.charAt(i) == 'u')){
-//                nbreVoyelle += 1;
-//            }
-//            i++;
-//        }
-//        System.out.println("Le nombre des voyelles est : "+ nbreVoyelle);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\t\t ***** COMPTAGE DES VOYELLES ***** ");
+        System.out.print("\t\t Entrez un mot : ");
+
+            // Recuperation du mot entré au clavier
+        String mot = sc.nextLine();
+
+            // Convertir en minuscule
+         mot = mot.toLowerCase();
+
+         int i=0, nbreVoyelle = 0;
+            // Compte les voyelles du mot et stock le nombre dans nbreVoyelle
+        while (i < mot.length()){
+            if ((mot.charAt(i) == 'a') || (mot.charAt(i) == 'e') || (mot.charAt(i) == 'i')
+                    || (mot.charAt(i) == 'o') || (mot.charAt(i) == 'u')){
+                nbreVoyelle += 1;
+            }
+            i++;
+        }
+
+        // Affichage du nombre de voyelle
+        System.out.println("Le nombre de voyelle est : "+ nbreVoyelle);
+
 
         // Exo 10 : Calcul de moyenne ponderée
 //
