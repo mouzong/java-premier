@@ -147,7 +147,38 @@ public class ExoMethodes {
     }
 
     public static void caculatrice(Scanner sc){
+        System.out.print("\n\t Entrez le premier nombre: ");
+        double nombre1 = sc.nextDouble();
 
+        System.out.print("\n\t Entrez le deuxieme nombre: ");
+        double nombre2 = sc.nextDouble();
+
+        System.out.print("\n\t Choisissez une operation ( +, -, *, / ) : ");
+        char operation = sc.next().charAt(0);
+        
+        double resultat = 0;
+        
+        switch (operation){
+            case '+':
+                resultat = nombre1 + nombre2;
+                break;
+            case '-':
+                resultat = nombre1 - nombre2;
+                break;
+            case '*':
+                resultat = nombre1 * nombre2;
+                break;
+            case '/':
+                resultat = nombre1 / nombre2;
+                break;
+            default:
+                System.out.println("\n\t Operation invalide !!!");
+                
+        }
+
+        System.out.println("\n\t Résultat : " + resultat);
+        
+        
     }
 
 }
