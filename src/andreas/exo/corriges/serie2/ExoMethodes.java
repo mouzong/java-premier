@@ -146,4 +146,8 @@ public class ExoMethodes {
         System.out.println("\n\t Minimum = "+ min);
     }
 
+    public static void caculatrice(Scanner sc){
+
+    }
+
 }
