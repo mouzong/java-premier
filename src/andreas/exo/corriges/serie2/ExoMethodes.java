@@ -181,4 +181,16 @@ public class ExoMethodes {
         
     }
 
+    public static void comptageVoyelles(Scanner sc){
+        // recuperer la chaine
+
+        // convertir en minuscule
+
+        // comparer chaque caractere de la chaine avec [a,e,i,o,u]
+
+        // compter pour chaque caractere correspondant
+
+        // afficher le compteur
+    }
+
 }
