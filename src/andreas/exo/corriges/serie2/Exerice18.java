@@ -1,5 +1,7 @@
 package andreas.exo.corriges.serie2;
 
+import andreas.projetfinal.entite.Client;
+
 import java.util.Scanner;
 
 public class Exerice18 {
@@ -10,6 +12,7 @@ public class Exerice18 {
          * sortie: 4 + 2 + 1 = 7
          */
 
+        System.out.println(new Client("Stephane"));
         Scanner sc = new Scanner(System.in);
 
         System.out.print("\n\t Entre un nombre de votre choix : ");
