@@ -6,7 +6,6 @@ public class Serie2Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
 //        ExoMethodes.exo1(sc);
 //        ExoMethodes.tableauInverse(sc);
 //        ExoMethodes.factoriel(sc);
