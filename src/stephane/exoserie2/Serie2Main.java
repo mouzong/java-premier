@@ -6,6 +6,7 @@ public class Serie2Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ExoMehodes.comptageVoyelles(sc);
+      //  ExoMehodes.comptageVoyelles(sc);
+        ExoMehodes.palindrome(sc);
     }
 }
