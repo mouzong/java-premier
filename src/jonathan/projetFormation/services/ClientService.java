@@ -2,6 +2,7 @@ package jonathan.projetFormation.services;
 
 import jonathan.projetFormation.entities.Client;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class ClientService {
@@ -40,5 +41,45 @@ public class ClientService {
         monClient.setNomClient(telephone);
 
         return monClient;
+    }
+    public static void createcustomer(Scanner sc){
+        // Enregistrer un client avec ses details:
+
+        System.out.print("\t Entrée votre Nom et Prenom : ");
+        String nom = sc.nextLine();
+
+        System.out.print("\t Entrée votre Annee de naissance : ");
+        int annee = sc.nextInt();
+        System.out.print("\t Entrée votre Mois de naissance : ");
+        int mois = sc.nextInt();
+        System.out.print("\t Entrée votre Jour de naissance : ");
+        int jour = sc.nextInt();
+        LocalDate dateNaissance = LocalDate.of(annee,mois,jour);
+        //LocalDate dateNaissance = LocalDate.of(jour,mois,annee);
+        sc.nextLine();
+        System.out.print("\t Entrée votre Adresse Mail : ");
+        String mail = sc.nextLine();
+
+        System.out.print("\t Entrée votre numero de telephone : ");
+        int tel = sc.nextInt();
+
+        System.out.print("\t Entrée votre Annee d'entrée : ");
+        int annee2 = sc.nextInt();
+        System.out.print("\t Entrée votre Mois d'entrée : ");
+        int mois2 = sc.nextInt();
+        System.out.print("\t Entrée votre Jour d'entrée : ");
+        int jour2 = sc.nextInt();
+        LocalDate dateEntree = LocalDate.of(annee2,mois2,jour2);
+
+        System.out.println("Affichage des informations sur le client");
+
+        System.out.println("Clients : [\n{");
+        System.out.println(
+                "\t nom :"+nom+
+                "\n\t dateDeNaissance : "+dateNaissance.getDayOfMonth()+" "+dateNaissance.getMonth()+" "+dateNaissance.getYear()+
+                "\n\t mail : " +mail+
+                "\n\t telephone : " +tel+
+                "\n\t dateEntree : " +dateEntree+
+        "\n}\n]");
     }
 }

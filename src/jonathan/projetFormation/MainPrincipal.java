@@ -4,10 +4,12 @@ import jonathan.projetFormation.Tools.MenuPrincipal;
 import jonathan.projetFormation.Tools.Tools;
 import jonathan.projetFormation.services.ClientService;
 
+import java.util.Scanner;
+
 public class MainPrincipal {
     public static void main(String[] args) {
 
-        ClientService.createClient();
+        /*ClientService.createClient();
 
         //Affichage de l'entête du Menu
         MenuPrincipal.afficherEnteteDeMenu();
@@ -45,7 +47,9 @@ public class MainPrincipal {
         switch (choixProduit) {
             case 0 -> MenuPrincipal.Quitter();
             case 6 -> MenuPrincipal.menuPrincipal();
-        }
+        }*/
+        Scanner monScanner = new Scanner(System.in);
+        ClientService.createcustomer(monScanner);
 
     }
 }
