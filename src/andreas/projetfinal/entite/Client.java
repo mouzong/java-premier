@@ -28,6 +28,10 @@ public class Client {
         this.prenomClient = prenomClient;
     }
 
+    public Client(String stephane) {
+        this.nomClient = stephane;
+    }
+
     public String getNomClient() {
         return nomClient;
     }
