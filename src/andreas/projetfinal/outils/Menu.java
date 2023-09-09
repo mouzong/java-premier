@@ -1,9 +1,6 @@
-<<<<<<<< HEAD:src/andreas/projetfinal/outils/Menu.java
+
 package andreas.projetfinal.outils;
 
-========
-package jonathan.projetFormation.Tools;
->>>>>>>> 231e266f34cf188036194261fe4f819c8907b959:src/jonathan/projetFormation/Tools/MenuPrincipal.java
 import java.util.Scanner;
 
 public class Menu {
