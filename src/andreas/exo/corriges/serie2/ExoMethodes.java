@@ -23,9 +23,10 @@ public class ExoMethodes {
             somme += elements[i];
         }
 
-        System.out.println("\n\t La somme des éléments est = "+ somme);
+       System.out.println("\n\t La somme des éléments est = "+ somme);
 
-    }
+   }
+
 
     public static void tableauInverse(Scanner scanner){
         System.out.print("\n\t Entrez la taille tableau : ");
