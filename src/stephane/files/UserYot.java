@@ -4,18 +4,18 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class User {
+public class UserYot {
     private String nomComplet;
     private String telephone;
     private String mail;
     private LocalDate dateDeNaissance;
     private LocalDateTime dateEnregistrement;
 
-    public User() {
+    public UserYot() {
         this.dateEnregistrement = LocalDateTime.now();
     }
 
-    public User(String nomComplet, String telephone, String mail, LocalDate dateDeNaissance) {
+    public UserYot(String nomComplet, String telephone, String mail, LocalDate dateDeNaissance) {
         this.nomComplet = nomComplet;
         this.telephone = telephone;
         this.mail = mail;
@@ -67,7 +67,7 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
+        UserYot user = (UserYot) o;
         return Objects.equals(nomComplet, user.nomComplet) && Objects.equals(telephone, user.telephone) && Objects.equals(mail, user.mail) && Objects.equals(dateDeNaissance, user.dateDeNaissance) && Objects.equals(dateEnregistrement, user.dateEnregistrement);
     }
 
