@@ -35,7 +35,7 @@ public class MainFiles {
 
         FileWriter stylo = null;
         try {
-            stylo = new FileWriter(fichier);
+            stylo = new FileWriter(fichier, true);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
