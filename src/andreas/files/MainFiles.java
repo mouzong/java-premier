@@ -24,18 +24,33 @@ public class MainFiles {
  * - enregistrez les user dans la BD
  *
  */
-//        User utilisateur1 = new User(
-//                "Sylvain FOTSO",
-//                "+237 (6) XX XX XX XX",
-//                "sylvain.fotso@adacorp.com",
-//                LocalDate.of(1993,5,2)
-//        );
-
+        File fichier = createFile("src/andreas/files/bd-users.txt");
         Scanner sc = new Scanner(System.in);
+        Scanner scSurFichier = new Scanner(fichier);
 
         // Creation du fichier
-        File fichier = createFile("src/andreas/files/bd-users.txt");
 
+
+        switch (menu(sc)) {
+            case 1:
+                addOneUser(fichier, sc);
+                break;
+            case 2:
+                addManyUsers(fichier, sc);
+                break;
+            case 3:
+                showUsers(scSurFichier);
+                break;
+            case 0:
+                exitProgram();
+                break;
+            default:
+                System.out.println("\n\t Erreur. Mauvais choix de menu !!! ");
+        }
+
+    }
+
+    public static  void addManyUsers(File fichier, Scanner sc) throws IOException {
         // Demande du nombre de uses a enregister par l'admin
         System.out.println("\n\t Combien de users voulez-vous enregistrer? : ");
         int nombredeUser = sc.nextInt();
@@ -50,12 +65,27 @@ public class MainFiles {
         }
 
         for(User utilisateur : users){
-            ecrireDansFichier(fichier, utilisateur);
+            try {
+                ecrireDansFichier(fichier, utilisateur);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
-
-
     }
 
+    public static void exitProgram(){
+        System.out.println("\n\t Merci pour votre visite à bientôt sur notre plateforme !!! ");
+    }
+
+    public static void showUsers(Scanner sc){
+        while (sc.hasNext()){
+            System.out.println(sc.nextLine());
+        }
+    }
+    public static void addOneUser(File fichier, Scanner sc) throws IOException {
+        User user = createUser(sc);
+        ecrireDansFichier(fichier, user);
+    }
     private static File createFile(String chemin){
         File fichier = new File(chemin);
         try{
@@ -83,10 +113,6 @@ public class MainFiles {
         }
         PrintWriter user = new PrintWriter(stylo);
 
-//        System.out.print("\n\t Entrez une phrase a ecrire dans le fichier : ");
-//        String phrase = scConsole.nextLine();
-
-
         user.println("\n\t " + utilisateurAEnregistrer);
 
         // Vidange de la memoire
@@ -103,5 +129,22 @@ public class MainFiles {
 
 
         return user;
+    }
+
+    private static int menu(Scanner sc){
+        int choix = 0;
+
+        System.out.println("\n\t :::::::: MENU ::::::: ");
+        System.out.println("\n\t 1 - Ajouter un utilisateur ");
+        System.out.println("\t 2 - Ajouter plusieurs utilisateurs ");
+        System.out.println("\t 3 - Afficher les utilisateurs ");
+        System.out.println("\t 0 - Sortir ");
+
+        System.out.print("\n\t Entrez votre choixde menu : ");
+        choix = sc.nextInt();
+
+        sc.nextLine();
+
+        return choix;
     }
 }
