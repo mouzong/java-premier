@@ -1,35 +1,46 @@
 package andreas.projetfinal.entite;
 
+import java.time.LocalDate;
+import java.util.Objects;
+
 public class Client {
     public static int nombreDeClients = 0;
     private String nomClient;
     private String prenomClient;
-    private String adresse;
     private String email;
     private String telephone;
+    private LocalDate dateDeNaissance;
 
-    public Client() {
-        nombreDeClients++;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return Objects.equals(nomClient, client.nomClient) && Objects.equals(prenomClient, client.prenomClient) && Objects.equals(email, client.email) && Objects.equals(telephone, client.telephone) && Objects.equals(dateDeNaissance, client.dateDeNaissance);
     }
 
-    public Client(String nomClient, String prenomClient, String adresse, String email, String telephone) {
-        this.nomClient = nomClient;
-        this.prenomClient = prenomClient;
-        this.adresse = adresse;
-        this.email = email;
-        this.telephone = telephone;
-        nombreDeClients++;
+    @Override
+    public int hashCode() {
+        return Objects.hash(nomClient, prenomClient, email, telephone, dateDeNaissance);
     }
 
-    public Client(String nomClient, String prenomClient) {
-        nombreDeClients++;
-
-        this.nomClient = nomClient;
-        this.prenomClient = prenomClient;
+    @Override
+    public String toString() {
+        return "Client { \n" +
+                "\t\t nomClient = '" + nomClient + '\'' +
+                ", \n\t\t prenomClient = '" + prenomClient + '\'' +
+                ", \n\t\t email = '" + email + '\'' +
+                ", \n\t\t telephone = '" + telephone + '\'' +
+                ", \n\t\t dateDeNaissance = " + dateDeNaissance +
+                "\n\t }";
     }
 
-    public Client(String stephane) {
-        this.nomClient = stephane;
+    public static int getNombreDeClients() {
+        return nombreDeClients;
+    }
+
+    public static void setNombreDeClients(int nombreDeClients) {
+        Client.nombreDeClients = nombreDeClients;
     }
 
     public String getNomClient() {
@@ -48,14 +59,6 @@ public class Client {
         this.prenomClient = prenomClient;
     }
 
-    public String getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -72,14 +75,11 @@ public class Client {
         this.telephone = telephone;
     }
 
-    @Override
-    public String toString() {
-        return "Client{" +
-                "\nnomClient='" + nomClient + '\'' +
-                ", \nprenomClient='" + prenomClient + '\'' +
-                ", \nadresse='" + adresse + '\'' +
-                ", \nemail='" + email + '\'' +
-                ", \ntelephone='" + telephone + '\'' +
-                '}';
+    public LocalDate getDateDeNaissance() {
+        return dateDeNaissance;
+    }
+
+    public void setDateDeNaissance(LocalDate dateDeNaissance) {
+        this.dateDeNaissance = dateDeNaissance;
     }
 }

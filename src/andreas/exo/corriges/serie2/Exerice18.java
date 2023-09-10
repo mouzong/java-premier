@@ -12,7 +12,6 @@ public class Exerice18 {
          * sortie: 4 + 2 + 1 = 7
          */
 
-        System.out.println(new Client("Stephane"));
         Scanner sc = new Scanner(System.in);
 
         System.out.print("\n\t Entre un nombre de votre choix : ");
