@@ -22,3 +22,19 @@
 	 dateDeNaissance : 1993-05-02, 
 	 dateEnregistrement : 2023-09-10T11:53:10.631897
 	 }
+
+	 User {
+	 nomComplet : '', 
+	 telephone : 'null', 
+	 mail : 'null',  
+	 dateDeNaissance : null, 
+	 dateEnregistrement : 2023-09-10T12:49:29.046772
+	 }
+
+	 User {
+	 nomComplet : 'Stephane YOT', 
+	 telephone : 'null', 
+	 mail : 'null',  
+	 dateDeNaissance : null, 
+	 dateEnregistrement : 2023-09-10T12:49:29.049054
+	 }
