@@ -17,7 +17,7 @@ public class DatesMethodes {
         String date = sc.nextLine();
         System.out.println("\n\t Vous etes né le " +date + ".");
         String message = "Bienvenu chez nous et passez un agreable séjour";
-        System.out.println("\n\t Bonjour Mr/Mme :"  + message);
+        System.out.println("\n\t Bonjour Mr/Mme :" +message);
 
         String[] tab = date.split("/");
         int annee = parseInt(tab[0]), mois = parseInt(tab[1]), jour = parseInt(tab[2]);
