@@ -1,4 +1,0 @@
-
-	 Je veux ajouter cette ligne a la suite du contenu actuel de fichier.txt
-
-	 Test de rajout

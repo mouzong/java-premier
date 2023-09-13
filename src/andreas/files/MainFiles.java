@@ -1,14 +1,13 @@
 package andreas.files;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import andreas.exceptions.BaseDeDonneesVide;
+
+import java.io.*;
 import java.time.LocalDate;
 import java.util.Scanner;
 
 public class MainFiles {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, BaseDeDonneesVide {
 /**
  * Modifier le programme actuel pour qu'il prenne en compte le nombre d'utilisateur
  * a enregistrer dans le system via la console:
@@ -27,26 +26,30 @@ public class MainFiles {
         File fichier = createFile("src/andreas/files/bd-users.txt");
         Scanner sc = new Scanner(System.in);
         Scanner scSurFichier = new Scanner(fichier);
+        int choix = menu(sc);
 
         // Creation du fichier
 
-
-        switch (menu(sc)) {
-            case 1:
-                addOneUser(fichier, sc);
-                break;
-            case 2:
-                addManyUsers(fichier, sc);
-                break;
-            case 3:
-                showUsers(scSurFichier);
-                break;
-            case 0:
-                exitProgram();
-                break;
-            default:
-                System.out.println("\n\t Erreur. Mauvais choix de menu !!! ");
+        while (choix != 0){
+            switch (choix) {
+                case 1:
+                    addOneUser(fichier, sc);
+                    break;
+                case 2:
+                    addManyUsers(fichier, sc);
+                    break;
+                case 3:
+                    showUsers(fichier, scSurFichier);
+                    break;
+                case 0:
+                    exitProgram();
+                    break;
+                default:
+                    System.out.println("\n\t Erreur. Mauvais choix de menu !!! ");
+            }
+             choix = menu(sc);
         }
+
 
     }
 
@@ -77,10 +80,30 @@ public class MainFiles {
         System.out.println("\n\t Merci pour votre visite à bientôt sur notre plateforme !!! ");
     }
 
-    public static void showUsers(Scanner sc){
-        while (sc.hasNext()){
-            System.out.println(sc.nextLine());
+    public static void showUsers(File fichier, Scanner sc) throws FileNotFoundException {
+
+        if(!fichier.exists()){
+            throw new FileNotFoundException("Le fichier de la base de donnees n'existe pas !!! ");
         }
+
+        try {
+            if (sc.hasNext()){
+                while (sc.hasNext()){
+                    System.out.println(sc.nextLine());
+                }
+            } else {
+                throw new BaseDeDonneesVide("""
+                    \t La base de donnees est vide !!!\s
+                    \t Veuillez ajouter des utilisateurs avant exploitation !!!\s
+                    """);
+            }
+        } catch (Exception ex){
+            System.out.println("\n\t Erreur de lecture de la base de données :"+ ex.getMessage());
+        }finally {
+            // TODO: faire pointer le scanner (SC) au debut du fichier
+            System.out.println("\n\t Merci de faire un nouveau choix de menu !");
+        }
+
     }
     public static void addOneUser(File fichier, Scanner sc) throws IOException {
         User user = createUser(sc);
@@ -123,10 +146,22 @@ public class MainFiles {
     private static User createUser(Scanner sc){
         User user = new User();
 
-        System.out.print("\n\t Entrez votre nom complet: ");
+        System.out.print("\n\t Entrez votre nom complet : ");
         user.setNomComplet(sc.nextLine());
 
+        System.out.print("\n\t Entrez votre email : ");
+        user.setMail(sc.nextLine());
 
+        System.out.print("\n\t Entrez votre numéro de telephone: ");
+        user.setTelephone(sc.nextLine());
+
+        System.out.print("\n\t Entrez votre date de naissance (aaaa-mm-jj): ");
+        String[] date = sc.nextLine().split("-");
+        user.setDateDeNaissance(LocalDate.of(
+                Integer.parseInt(date[0]),
+                Integer.parseInt(date[1]),
+                Integer.parseInt(date[2]))
+        );
 
         return user;
     }
@@ -134,16 +169,21 @@ public class MainFiles {
     private static int menu(Scanner sc){
         int choix = 0;
 
-        System.out.println("\n\t :::::::: MENU ::::::: ");
-        System.out.println("\n\t 1 - Ajouter un utilisateur ");
-        System.out.println("\t 2 - Ajouter plusieurs utilisateurs ");
-        System.out.println("\t 3 - Afficher les utilisateurs ");
-        System.out.println("\t 0 - Sortir ");
+        do {
+            System.out.println("\n\t :::::::: MENU ::::::: ");
+            System.out.println("\n\t 1 - Ajouter un utilisateur ");
+            System.out.println("\t 2 - Ajouter plusieurs utilisateurs ");
+            System.out.println("\t 3 - Afficher les utilisateurs ");
+            System.out.println("\t 0 - Sortir ");
 
-        System.out.print("\n\t Entrez votre choixde menu : ");
-        choix = sc.nextInt();
+            System.out.print("\n\t Entrez votre choix de menu : ");
+            choix = sc.nextInt();
 
-        sc.nextLine();
+            sc.nextLine();
+
+            if(choix < 0 || choix > 3) System.out.println("\n\t ") ;
+
+        }while(choix < 0 || choix >3);
 
         return choix;
     }
