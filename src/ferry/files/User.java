@@ -59,4 +59,21 @@ public class User {
         User user = (User) o;
         return Objects.equals(nomComplet, user.nomComplet) && Objects.equals(telephone, user.telephone) && Objects.equals(mail, user.mail) && Objects.equals(dateDeNaissance, user.dateDeNaissance) && Objects.equals(dateEnregistrement, user.dateEnregistrement);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nomComplet, telephone, mail, dateDeNaissance, dateEnregistrement);
+
+    }
+
+    @Override
+    public String toString() {
+        return "User {" +
+                "\n\t nomComplet : ' " + nomComplet + '\'' +
+                ", \n\t telephone : ' " + telephone + '\'' +
+                ",  \n\t mail : ' " + mail + '\'' +
+                ",  \n\t dateDeNaissance : ' " + dateDeNaissance +
+                ",\n\t dateEnregistrement : " + dateEnregistrement +
+                "\n\t }";
+    }
 }
