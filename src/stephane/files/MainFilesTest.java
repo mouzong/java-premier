@@ -6,48 +6,41 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class MainFiles0 {
+public class MainFilesTest {
     public static void main(String[] args) throws IOException {
 
         Scanner scConsole = new Scanner(System.in);
         // Creation du fichier
-        File fichier = createFile("src/stephane/files/fichier.txt");
+        File fichier = createFile("src/stephane/files/fichierStep.txt");
 
-        // Ecriture dans le fichier
+        // Ecriture dans le Fichier
         FileWriter stylo = new FileWriter(fichier);
         PrintWriter user = new PrintWriter(stylo);
 
-        System.out.print("\n\t Entrez votre nom complet");
+        System.out.print("Entrez votre nom complet :");
         String nomComplet = scConsole.nextLine();
+        user.println("\n\t\t Bonjour le monde de la programmation JAVA avec le Big Boss Andreas "+
+                nomComplet);
 
-
-        user.println("\n\t Bonjour et bienvenue dans mon premier fichier M./Mme : !!!" + nomComplet);
-
-        // Vidange de la memoire
+        //vidage de la memoire
         user.flush();
         user.close();
-
-
     }
 
-    private static File createFile(String chemin){
+    private static File createFile(String chemin) throws IOException{
         File fichier = new File(chemin);
-        try{
-            if(!fichier.exists()){
+
+            if (!fichier.exists()){
                 try {
                     fichier.createNewFile();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-            }
+            }else System.out.println("Le fichier existe deja ");
             return fichier;
-        } catch (Exception e){
-            System.out.println(e.getMessage());
         }
-        return fichier;
-    }
+        //return fichier;
 
-    private static void ecrireDansFichier(){
+        }
 
-    }
-}
+
