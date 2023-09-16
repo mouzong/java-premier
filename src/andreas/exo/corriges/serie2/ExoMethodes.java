@@ -5,12 +5,12 @@ import sout.Sout;
 import java.util.Scanner;
 
 public class ExoMethodes {
-    public static void exo1(Scanner scanner){
+    public static void exo1(Scanner sc){
         /**
          *  ENONCE : Calculer la somme des elements d'un tableau
          */
         System.out.print("\n\t Entrez la taille tableau : ");
-        int taille = scanner.nextInt();
+        int taille = sc.nextInt();
 
         int[] elements = new int[taille];
 
@@ -19,13 +19,14 @@ public class ExoMethodes {
         System.out.print("\n\t Entrez "+ taille +" nombres entier séparés par des espaces : ");
 
         for (int i = 0; i < taille; i++){
-            elements[i] = scanner.nextInt();
+            elements[i] = sc.nextInt();
             somme += elements[i];
         }
 
-        System.out.println("\n\t La somme des éléments est = "+ somme);
+       System.out.println("\n\t La somme des éléments est = "+ somme);
 
-    }
+   }
+
 
     public static void tableauInverse(Scanner scanner){
         System.out.print("\n\t Entrez la taille tableau : ");
