@@ -31,7 +31,7 @@ public class MainFiles {
         // Scanner scConsole = new Scanner(System.in);
         // Creation du fichier
         File fichier = createFile("src/andreas/files/bd-users.txt");
-
+//fichier.renameTo();
         ecrireDansFichier(fichier, utilisateur1);
 
     }
