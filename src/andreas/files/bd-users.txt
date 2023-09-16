@@ -1,24 +1,15 @@
-
 	 User {
-	 nomComplet : 'Max WHITE', 
-	 telephone : '+237 (6) 98 98 98 98', 
-	 mail : 'max.white@adacorp.com',  
-	 dateDeNaissance : 1993-05-02, 
-	 dateEnregistrement : 2023-09-10
+		 "nomComplet" :"Andreas MOUZONG", 
+		 "telephone" : "+237654702565", 
+		 "mail" : "andreas@adacorp.com", 
+		 "dateDeNaissance" : 2023-09-13, 
+		 "dateEnregistrement" : 2023-09-13T20:30:28.321
 	 }
 
 	 User {
-	 nomComplet : 'Andreas MOUZONG', 
-	 telephone : '+237 (6) 54 70 25 65', 
-	 mail : 'andreas.fefe@adacorp.com',  
-	 dateDeNaissance : 1993-05-02, 
-	 dateEnregistrement : 2023-09-10
-	 }
-
-	 User {
-	 nomComplet : 'Sylvain FOTSO', 
-	 telephone : '+237 (6) XX XX XX XX', 
-	 mail : 'sylvain.fotso@adacorp.com',  
-	 dateDeNaissance : 1993-05-02, 
-	 dateEnregistrement : 2023-09-10T11:53:10.631897
+		 "nomComplet" :"Stephane YOT", 
+		 "telephone" : "+237 989 989 989", 
+		 "mail" : "stephane@adacorp.com", 
+		 "dateDeNaissance" : 2023-09-13, 
+		 "dateEnregistrement" : 2023-09-13T20:48:34.012890
 	 }

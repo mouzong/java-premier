@@ -82,11 +82,11 @@ public class User {
     @Override
     public String toString() {
         return "User {" +
-                "\n\t nomComplet : '" + nomComplet + '\'' +
-                ", \n\t telephone : '" + telephone + '\'' +
-                ", \n\t mail : '" + mail + '\'' +
-                ",  \n\t dateDeNaissance : " + dateDeNaissance +
-                ", \n\t dateEnregistrement : " + dateEnregistrement +
+                "\n\t\t \"nomComplet\" :\"" + nomComplet + '\"' +
+                ", \n\t\t \"telephone\" : \"" + telephone + '\"' +
+                ", \n\t\t \"mail\" : \"" + mail + '\"' +
+                ", \n\t\t \"dateDeNaissance\" : " + dateDeNaissance +
+                ", \n\t\t \"dateEnregistrement\" : " + dateEnregistrement +
                 "\n\t }";
     }
 }
