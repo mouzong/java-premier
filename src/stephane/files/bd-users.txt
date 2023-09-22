@@ -1,0 +1,16 @@
+
+	 User {
+	 nomComplet : 'Yot Stephane', 
+	 telephone : '+237 699 33 59 13 ', 
+	 mail : 'stephaneYot@gmail.com',  
+	 dateDeNaissance : 1984-03-06, 
+	 dateEnregistrement : 2023-09-10T13:51:32.139674700
+	 }
+
+	 User {
+	 nomComplet : 'Andreas Moudzon', 
+	 telephone : '+33 155 123 458 698', 
+	 mail : 'andreasmotz@yahoo.fr',  
+	 dateDeNaissance : 1997-07-05, 
+	 dateEnregistrement : 2023-09-10T13:52:21.877462900
+	 }
